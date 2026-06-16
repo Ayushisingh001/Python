@@ -1,0 +1,7 @@
+What is the difference between deep copy and shallow copy?
+
+Shallow Copy: Creates a new object, but nested objects are still shared.
+Deep Copy: Creates a completely independent copy, including all nested objects.
+
+Shallow Copy -> Shares inner objects
+Deep Copy    -> Copies everything
