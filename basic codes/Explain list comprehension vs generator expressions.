@@ -1,0 +1,20 @@
+#Explain list comprehension vs generator expressions.
+
+1.List Comprehension
+Creates the entire list in memory at once.
+squares = [x*x for x in range(5)]
+print(squares)
+o/p-->[0, 1, 4, 9, 16]-->Lots of memory.
+Everything is stored immediately.
+
+2.Generator Expression
+Produces values one at a time when needed.
+Water dispenser.
+Press button
+↓
+Get one bottle
+Only produces what you need
+squares = (x*x for x in range(5))
+print(squares)
+o/p-->[0, 1, 4, 9, 16]-->much less memory.
+generators produce values one by one
