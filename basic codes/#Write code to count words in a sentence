@@ -1,0 +1,22 @@
+##Write code to count words in a sentence
+
+sentence="ayushi is intelligent"
+count=0
+for i in sentence.split():
+ count+=1
+print(count)
+
+Time Complexity: O(n) 
+Space Complexity: O(n)
+
+in case we don't use split-->
+sentence="bitty baught butter"
+count=0
+for i in range(len(sentence)):
+    if(i==0 and i!=' '):
+        count+=1
+    elif(i!=' ' and sentence[i-1]==' '):
+        count+=1
+print(count)
+
+
