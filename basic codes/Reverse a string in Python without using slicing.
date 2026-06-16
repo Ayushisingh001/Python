@@ -1,0 +1,23 @@
+//Reverse a string in Python without using slicing.
+
+//1st approach
+str="hello"
+rev=""
+#using loop
+for ch in str:
+    rev=ch+rev
+
+print(rev)
+Time Complexity: O(n²) because string concatenation creates new strings repeatedly.
+
+//2nd approach
+def reverse_string(s):
+    chars = list(s)
+    left, right = 0, len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+  return "".join(chars) 
+Time Complexity: O(n)
+Space Complexity: O(n)
