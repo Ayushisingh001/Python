@@ -1,0 +1,49 @@
+#Write a function to check if a string is a palindrome.
+-->1st approach
+str="madam"
+rev=''
+for i in str:
+    rev=i+rev
+if(str==rev):
+        print("palindrome")
+else:
+        print("not palindrome")
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+
+-->2nd approach
+str="madam"
+chars=list(str)
+left=0
+right=len(str)-1
+for i in str:
+    chars[left],chars[right]=chars[right],chars[left]
+    left+=1
+    right-=1
+    ans="".join(str)
+if(str==ans):
+    print('palindrome')
+else:
+    print('not palindrome')
+
+
+
+-->3rd approach
+str="madam"
+left=0
+right=len(str)-1
+is_palindrome=True
+for i in str:
+    if str[left]!=str[right]:
+        is_palindrome=False
+        break
+    left+=1
+    right-=1
+
+if(is_palindrome):
+    print('palindrome')
+else:
+    print('not palindrome')
+Time Complexity: O(n)
+Space Complexity: O(1)
