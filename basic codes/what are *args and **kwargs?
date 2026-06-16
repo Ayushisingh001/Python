@@ -1,0 +1,29 @@
+what are *args and **kwargs?
+
+1.*args
+Accepts multiple positional arguments.
+def add(*args):
+    print(sum(args))
+add(10, 20, 30))
+
+o/p-->60
+
+
+2.**kwargs
+Accepts multiple keyword arguments.
+def info(**kwargs):
+    print(kwargs)
+info(name="Ayushi", age=22)
+
+o/p-->{'name': 'Ayushi', 'age': 22}
+is a dictionary.
+
+
+3.both
+def demo(*args, **kwargs):
+    print(args)
+    print(kwargs)
+demo(1, 2, 3, name="Ayushi", city="Pune")
+
+o/p-->(1, 2, 3)
+{'name': 'Ayushi', 'city': 'Pune'}
