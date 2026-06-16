@@ -1,1 +1,14 @@
+#Find the 2nd largest element in a list without using sort.
+#second = very very very small number
 
+l=[1,5,6,8,2]
+largest=max(l)
+second=float('-inf')
+for num in l:
+    if num!=largest and num>second:
+        second=num
+print(second)
+
+
+Time Complexity: O(n)
+Space Complexity: O(1)
