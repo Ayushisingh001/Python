@@ -1,0 +1,18 @@
+
+ list                                             tuple
+Mutable (can be changed)	              Immutable (cannot be changed)
+Uses []	                                 Uses ()
+Slightly slower	                        Slightly faster
+More memory	                            Less memory
+allows modification of its elements     elements cannot be changed after creation.
+
+[] → Flexible
+() → Fixed
+Tuples are also hashable, so they can be used as dictionary keys, whereas lists cannot.
+If Python used a list as a dictionary key, the hash could change, which would break the dictionary.
+
+Q.If tuples are immutable, can they contain mutable objects?
+t = ([1, 2], [3, 4])
+Yes.
+t[0].append(5)
+works because you're modifying the list inside the tuple, not the tuple itself.
