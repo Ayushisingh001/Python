@@ -1,0 +1,57 @@
+What are decorators in Python? Write a simple timing decorator.
+
+A decorator is a function that adds extra functionality to another function without modifying its original code.
+Think of it like wrapping a gift 🎁:
+It is commonly used for logging, authentication, caching, and measuring execution time.
+A decorator is a function that takes function as argument and returns function only
+
+code:
+def decorator(func):
+    def wrapper():
+        print("transaction initiated")
+        func()  #original func
+        print("transaction completed")
+    return wrapper
+                                                                #def hello():
+                                                                #print("executing all steps of transaction")
+                                                                   # hello1=decorator(hello)
+                                                                   # hello1()
+@decorator
+def hello(): #original func
+ print("executing all steps of transaction")
+hello()
+o/p-->
+transaction initiated
+executing all steps of transaction
+transaction completed
+
+
+Q.Write a simple timing decorator.
+A timing decorator is a decorator that measures how long a function takes to execute by recording the start time and end time and printing their difference.
+import time
+def decorator(func):
+    def wrapper():
+        start=time.time()
+        print("start")
+        func()
+        end=time.time()
+        print("end")
+        print("execution time is",end-start,"seconds")
+    return wrapper
+
+@decorator
+def hello():
+    for i in range(1000000):
+        pass
+hello()
+
+start
+end
+execution time is 0.06876015663146973 seconds
+
+
+
+
+
+
+
