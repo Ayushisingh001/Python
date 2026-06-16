@@ -1,0 +1,27 @@
+
+Given a list of numbers, find all pairs that sum to a target value.
+-->brute force
+l=[1,2,3,4,5]  #t=9
+target=9
+for i in range(len(l)) :
+        for j in range(i+1,len(l)):
+            if l[i]+l[j]==target:
+              print((l[i],l[j]))
+
+TC = O(n²)
+SC = O(1)
+
+
+optimized approach-->using hashset
+l=[2, 7, 11, 15, 3, 6]  #t=9
+target=9
+seen=set()
+for i in l:
+    complement=target-i
+
+    if complement in seen:
+        print((complement,i))
+
+    seen.add(i)
+TC = O(n)
+SC = O(n)
