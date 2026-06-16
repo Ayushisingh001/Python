@@ -1,0 +1,17 @@
+#Write code to count word frequency in a sentence.
+
+sentence = "bitty baught butter but the butter was bitter"
+freq={}
+for i in sentence.split():
+    if(i in freq):
+        freq[i]+=1
+    else:
+        freq[i] = 1
+print(freq)
+
+o/p-->
+{'bitty': 1, 'baught': 1, 'butter': 2, 'but': 1, 'the': 1, 'was': 1, 'bitter': 1}
+TC = O(n)
+SC = O(k)
+Worst case, every word is unique:
+SC = O(n)
