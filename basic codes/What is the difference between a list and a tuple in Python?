@@ -1,4 +1,5 @@
 
+#What is the difference between a list and a tuple in Python?
  list                                             tuple
 Mutable (can be changed)	              Immutable (cannot be changed)
 Uses []	                                 Uses ()
