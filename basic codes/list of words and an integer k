@@ -6,14 +6,48 @@ words = ["ai","ml","ai","rag","ml","ai","python"]
 k = 2
 Output:
 ["ai","ml"]
-def freq
+
+#brute force
+-nested loop
+def most_freq():
+    result = []
+    found = []
+
+    while len(result) < k:
+        max_word = ""
+        max_freq = -1
+
+        for i in range(len(words)):
+
+            if words[i] in found:
+                continue
+
+            count = 0
+
+            for j in range(len(words)):
+                if words[i] == words[j]:
+                    count += 1
+
+            if count > max_freq:
+                max_freq = count
+                max_word = words[i]
+
+            elif count == max_freq:
+                if words[i] < max_word:
+                    max_word = words[i]
+
+        result.append(max_word)
+        found.append(max_word)
+
+    return result
+
+print(most_freq())
 
 
-1.count[words]
-2.k=
+Time Complexity: O(n²)
+Space Complexity: O(k)
 
-#idea:Count how many times each word appears, sort by highest count first, 
-and if counts are equal sort alphabetically, then return the first K words.
+
 
 
 
